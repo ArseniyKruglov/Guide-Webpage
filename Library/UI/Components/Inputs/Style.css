@@ -1,0 +1,78 @@
+.InputContainer {
+  Display: Inline-Flex;
+}
+
+.InputContainer > * {
+  Border: None;
+  Background: None;
+  Width: 100%;
+  Text-overflow: Ellipsis;
+}
+
+.InputContainer > *:focus {
+  Outline: None;
+}
+
+.InputContainer:not(.Roomy) > * {
+  Margin: 5px;
+}
+
+.InputContainer.Roomy > * {
+  Margin: 14px;
+}
+
+.InputContainer:not(.Round) {
+  Border-Radius: 5px;
+}
+
+.InputContainer.Round {
+  Border-Radius: 50px;
+}
+
+.InputContainer.Outlined {
+  Border: 1px Solid Var(--Gray-20);
+}
+
+.InputContainer.Outlined:Hover, .InputContainer.Outlined:Focus-Within {
+  Border: 1px Solid Var(--Gray-80);
+}
+
+.InputContainer:not(.Outlined):Hover, .InputContainer:not(.Outlined):Focus-Within {
+  Background-Color: Var(--Gray-20);
+}
+
+.InputContainer.Bold > * {
+  Font-Weight: 500;
+}
+
+.InputContainer.Top {
+  Border-Radius: 25px 25px 5px 5px;
+}
+
+.InputContainer.Right {
+  Border-Radius: 5px 25px 25px 5px;
+}
+
+.InputContainer.Bottom {
+  Border-Radius: 5px 5px 25px 25px;
+}
+
+.InputContainer.Left {
+  Border-Radius: 25px 5px 5px 25px;
+}
+
+.InputContainer > Input[Type="Date"] {
+  Margin: 5px 10px;
+}
+
+.InputContainer.Roomy > Input[Type="Date"] {
+  Margin: 14px 20px;
+}
+
+.InputContainer > Input[Type="Datetime-Local"] {
+  Margin: 5px 10px;
+}
+
+.InputContainer.Roomy > Input[Type="Datetime-Local"] {
+  Margin: 14px 20px;
+}

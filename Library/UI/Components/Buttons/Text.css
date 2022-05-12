@@ -1,0 +1,98 @@
+* {
+  Color: Var(--Text);
+  Font-Size: 16px;
+}
+
+.Ellipsis,
+.Ellipsis * {
+  Overflow: Hidden;
+  Text-Overflow: Ellipsis;
+  White-Space: Nowrap;
+}
+
+Button.Text {
+  Padding: 0;
+  Font-Size: 100%;
+  Border: None;
+  Background: None;
+  Text-Align: Initial;
+}
+
+A.Text {
+  Text-decoration: None;
+  Color: Inherit;
+}
+
+Button.Text,
+A.Text {
+  Width: Fit-content;
+  Max-width: -webkit-fill-available;
+  Padding: 3px 5px;
+  Border-radius: 5px;
+  Transition: Color 25ms, Background-color 25ms;
+  Overflow: Hidden;
+  Text-Overflow: Ellipsis;
+  White-Space: Nowrap;
+}
+
+Button.Text.Roomy,
+A.Text.Roomy {
+  Padding: 7.5px;
+}
+
+Button.Text,
+Button.Text.Icon > Span,
+A.Text,
+A.Text.Icon > Span {
+  Font-weight: 500;
+  Font-size: 14px;
+}
+
+Button.Text:Hover,
+A.Text:Hover {
+  Background-color: Var(--Gray-5);
+}
+
+Button.Text.Icon,
+A.Text.Icon {
+  Display: Flex;
+  Align-items: Center;
+  Gap: 7.5px;
+}
+
+Button.Text.Icon > Custom-icon,
+A.Text.Icon > Custom-icon {
+  --Scale: 20px;
+}
+
+Button.Text.Main,
+A.Text.Main {
+  Color: Var(--Main-UI);
+  --Ripple-Color: Var(--Main-UI);
+}
+
+Button.Text.Main:Hover,
+A.Text.Main:Hover {
+  Background-color: Var(--Main-UI-Transparent);
+  Color: Var(--Main-UI-Hover) !important;
+}
+
+Button.Text.Gray:not(:hover),
+Button.Text.Gray:not(:hover) > Span,
+Button.Text.Gray:not(:hover) > Custom-icon *,
+A.Text.Gray:not(:hover),
+A.Text.Gray:not(:hover) > Span,
+A.Text.Gray:not(:hover) > Custom-icon * {
+  Color: Var(--Gray-80);
+  Fill: Var(--Gray-80);
+}
+
+Button.Text.Outlined,
+A.Text.Outlined {
+  Border: 1px Solid Var(--Gray-20);
+}
+
+Button.Text.Outlined.Main,
+A.Text.Outlined.Main {
+  Border-color: HSLA(146, 70%, 30%, 25%);
+}

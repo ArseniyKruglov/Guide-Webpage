@@ -1,0 +1,18 @@
+.TitledSelect
+{
+	& > Span,
+	& > Select
+	{
+		Font-size: 16px;
+	}
+
+	& > Span
+	{
+		Font-weight: 500;
+	}
+
+	& > Select
+	{
+		Border: None;
+	}
+}

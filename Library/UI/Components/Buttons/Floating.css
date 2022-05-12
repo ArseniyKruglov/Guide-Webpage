@@ -1,0 +1,163 @@
+[AutoLayout] {
+  Display: Flex;
+}
+
+[Direction="Horizontal"] {
+  Flex-direction: Row;
+}
+
+[Direction="Horizontal"] > [Width="Fit"] {
+  Flex-grow: 0;
+}
+
+[Direction="Horizontal"] > [Width="Fill"] {
+  Flex-grow: 1;
+}
+
+[Direction="Horizontal"] > [Height="Fit"] {
+  Height: Fit-content;
+}
+
+[Direction="Horizontal"] > [Height="Fill"] {
+  Height: -webkit-fill-available;
+}
+
+[Direction="Horizontal"][Packing="Space between"] {
+  Justify-content: Space-between;
+}
+
+[Direction="Horizontal"][AlignX="Left"] {
+  Justify-content: Start;
+}
+
+[Direction="Horizontal"][AlignX="Center"] {
+  Justify-content: Center;
+}
+
+[Direction="Horizontal"][AlignX="End"] {
+  Justify-content: End;
+}
+
+[Direction="Horizontal"][AlignY="Bottom"] {
+  Align-items: Bottom;
+}
+
+[Direction="Horizontal"][AlignY="Baseline"] {
+  Align-items: Baseline;
+}
+
+[Direction="Horizontal"][AlignY="Center"] {
+  Align-items: Center;
+}
+
+[Direction="Horizontal"][AlignY="Top"] {
+  Align-items: Top;
+}
+
+[Direction="Vertical"] {
+  Flex-direction: Column;
+}
+
+[Direction="Vertical"] > [Width="Fit"] {
+  Width: Fit-content;
+}
+
+[Direction="Vertical"] > [Width="Fill"] {
+  Width: -webkit-fill-available;
+}
+
+[Direction="Vertical"] > [Height="Fit"] {
+  Flex-grow: 0;
+}
+
+[Direction="Vertical"] > [Height="Fill"] {
+  Flex-grow: 1;
+}
+
+[Direction="Vertical"][Packing="Space between"] {
+  Align-items: Space-between;
+}
+
+[Direction="Vertical"][AlignX="Left"] {
+  Align-items: Start;
+}
+
+[Direction="Vertical"][AlignX="Center"] {
+  Align-items: Center;
+}
+
+[Direction="Vertical"][AlignX="End"] {
+  Align-items: End;
+}
+
+[Direction="Vertical"][AlignY="Bottom"] {
+  Justify-content: Bottom;
+}
+
+[Direction="Vertical"][AlignY="Baseline"] {
+  Justify-content: Baseline;
+}
+
+[Direction="Vertical"][AlignY="Center"] {
+  Justify-content: Center;
+}
+
+[Direction="Vertical"][AlignY="Top"] {
+  Justify-content: Top;
+}
+
+Button.Floating {
+  --Scale: 56px;
+  --Scale-Icon: Calc(Var(--Scale) * 2 / 3);
+  Padding: 0;
+  Font-Size: 100%;
+  Border: None;
+  Background: None;
+  Text-Align: Initial;
+  Display: Flex;
+  Display: Flex;
+  Justify-content: Start;
+  Display: Flex;
+  Align-items: Start;
+  Display: Flex;
+  Flex-Direction: Row;
+  Display: Flex;
+  Align-content: Begin;
+  Justify-content: Begin;
+  Display: Flex;
+  Flex-grow: 0;
+  Display: Flex;
+  Flex-grow: 0;
+  Display: Flex;
+  Justify-content: Center;
+  Display: Flex;
+  Align-items: Center;
+  Width: Var(--Scale);
+  Height: Var(--Scale);
+  Border-Radius: 50%;
+  Position: Fixed;
+  Right: Var(--Padding);
+  Bottom: Calc(Var(--Padding)Var(--PaddingBottom, 0px));
+  Transition: Background-Color 100ms;
+}
+
+Button.Floating SVG {
+  Width: Var(--Scale-Icon);
+  Height: Var(--Scale-Icon);
+}
+
+Button.Floating:hover {
+  Background-Color: Var(--Gray-20);
+}
+
+@media (Min-Width: 700px) {
+  Button.Floating {
+    --Padding: 50px;
+  }
+}
+
+@media not all and (Min-Width: 700px) {
+  Button.Floating {
+    --Padding: 25px;
+  }
+}

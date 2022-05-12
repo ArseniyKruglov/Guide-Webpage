@@ -1,0 +1,15 @@
+.IconedList {
+  Display: Grid;
+  Gap: 10px;
+}
+
+.IconedList > * {
+  Display: Grid;
+  Grid-template-columns: Auto 1fr;
+  Gap: 15px;
+  Align-items: Center;
+}
+
+.IconedList > :not(:focus-within) > Custom-icon {
+  Opacity: 70%;
+}
