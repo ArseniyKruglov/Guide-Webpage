@@ -1,0 +1,89 @@
+HTML {
+  Width: 100%;
+  Height: 100%;
+}
+
+Body {
+  Margin: 0;
+}
+
+Header {
+  Padding: 20px 30px;
+}
+
+Header > A {
+  Text-decoration: None;
+  Color: Inherit;
+  Font-family: Var(--Font-UI);
+  Font-weight: 500;
+  Font-size: 14px;
+}
+
+Main {
+  Padding: 10px;
+  Gap: 125px;
+}
+
+Main > H1 {
+  Margin: 0;
+  Font-weight: 400;
+  Font-size: 16px;
+  Font-family: Var(--Font-Title);
+  Word-break: Break-word;
+  Text-align: Center;
+}
+
+@media (min-width: 600px) {
+  Main > H1 {
+    Font-size: 38px;
+  }
+}
+
+@media (max-width: 600px) {
+  Main > H1 {
+    Font-size: 32px;
+  }
+}
+
+@media (max-width: 300px) {
+  Main > H1 {
+    Font-size: 26px;
+  }
+}
+
+Main > #Features {
+  Flex-wrap: Wrap;
+  Gap: 10px;
+}
+
+Main > #Features > .Feature {
+  Gap: 25px;
+  Padding: 25px;
+  Border: 1px Solid Var(--Gray-20);
+  Border-radius: 5px;
+  Max-width: 300px;
+}
+
+Main > #Features > .Feature > Div {
+  Gap: 7.6px;
+}
+
+Main > #Features > .Feature > Div > H2 {
+  Margin: 0;
+  Font-weight: 400;
+  Font-size: 16px;
+  Font-weight: 500;
+}
+
+Main > #Features > .Feature > Div > Div {
+  Color: Var(--Gray-60);
+}
+
+Main > #Features > .Feature > A {
+  Text-decoration: None;
+  Color: Inherit;
+  Font-family: Var(--Font-UI);
+  Font-weight: 500;
+  Font-size: 14px;
+  Color: Var(--Main);
+}
