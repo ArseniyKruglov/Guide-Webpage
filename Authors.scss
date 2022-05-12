@@ -1,0 +1,89 @@
+@import 'Library/UI/Basic/Reset.scss';
+// @import 'Library/UI/Basic/Media.scss';
+@import 'Library/UI/Basic/Body.scss';
+
+Main
+{
+	Padding: 100px 25px;
+	Gap: 100px;
+
+	& > H1
+	{
+		@include Reset_H;
+		Font-size: 28px;
+		Font-family: Var(--Font-Title);
+	}
+
+	& > HR
+	{
+		Max-width: 60VW;
+	}
+
+	& > .You
+	{
+		Gap: 35px;
+
+		& > Div
+		{
+			& > .You
+			{
+				Font-family: Var(--Font-UI);
+				Font-size: 128px;
+			}
+
+			& > .Description
+			{
+				Font-family: Var(--Font-Text);
+				Font-size: 18px;
+				Text-align: Center;
+			}
+		}
+	}
+
+	& > .Authors
+	{
+		Max-width: 1000px;
+		Gap: 100px;
+
+		& > .Author
+		{
+			Gap: 25px;
+
+			& > .Header
+			{
+				Gap: 30px;
+
+				& > Img
+				{
+					Clip-path: Circle(45px);
+					Width: 90px;
+					Height: 90px;
+				}
+
+				& > Div
+				{
+					Gap: 7.5px;
+
+					& > .Name
+					{
+						Font-family: Var(--Font-Title);
+						Font-size: 24px;
+						Font-weight: 500;
+					}
+
+					& > .Description
+					{
+						Font-family: Var(--Font-Text);
+						Font-size: 14px;
+						Color: Var(--Gray-50);
+					}
+				}
+			}
+
+			& > .Description
+			{
+				Font-family: Var(--Font-Text);
+			}
+		}
+	}
+}

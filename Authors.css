@@ -1,0 +1,79 @@
+HTML {
+  Width: 100%;
+  Height: 100%;
+}
+
+Body {
+  Margin: 0;
+}
+
+Main {
+  Padding: 100px 25px;
+  Gap: 100px;
+}
+
+Main > H1 {
+  Margin: 0;
+  Font-weight: 400;
+  Font-size: 16px;
+  Font-size: 28px;
+  Font-family: Var(--Font-Title);
+}
+
+Main > HR {
+  Max-width: 60VW;
+}
+
+Main > .You {
+  Gap: 35px;
+}
+
+Main > .You > Div > .You {
+  Font-family: Var(--Font-UI);
+  Font-size: 128px;
+}
+
+Main > .You > Div > .Description {
+  Font-family: Var(--Font-Text);
+  Font-size: 18px;
+  Text-align: Center;
+}
+
+Main > .Authors {
+  Max-width: 1000px;
+  Gap: 100px;
+}
+
+Main > .Authors > .Author {
+  Gap: 25px;
+}
+
+Main > .Authors > .Author > .Header {
+  Gap: 30px;
+}
+
+Main > .Authors > .Author > .Header > Img {
+  Clip-path: Circle(45px);
+  Width: 90px;
+  Height: 90px;
+}
+
+Main > .Authors > .Author > .Header > Div {
+  Gap: 7.5px;
+}
+
+Main > .Authors > .Author > .Header > Div > .Name {
+  Font-family: Var(--Font-Title);
+  Font-size: 24px;
+  Font-weight: 500;
+}
+
+Main > .Authors > .Author > .Header > Div > .Description {
+  Font-family: Var(--Font-Text);
+  Font-size: 14px;
+  Color: Var(--Gray-50);
+}
+
+Main > .Authors > .Author > .Description {
+  Font-family: Var(--Font-Text);
+}
