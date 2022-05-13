@@ -50,12 +50,18 @@ A.Text
 		Display: Flex;
 		Align-items: Center;
 		Gap: 7.5px;
+
+		& > Custom-icon
+		{
+			--Scale: 20px;
+		}
+
+		& > Span
+		{
+			Font-family: Var(--Font-UI);
+		}
 	}
 
-	&.Icon > Custom-icon
-	{
-		--Scale: 20px;
-	}
 
 
 
@@ -77,8 +83,8 @@ A.Text
 	&.Gray:not(:hover) > Span,
 	&.Gray:not(:hover) > Custom-icon *
 	{
-		Color: Var(--Gray-80);
-		Fill: Var(--Gray-80);
+		Color: Var(--Gray-70);
+		Fill: Var(--Gray-70);
 	}
 
 

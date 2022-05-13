@@ -8,10 +8,12 @@ Body {
 }
 
 Body {
-  Gap: 50px;
+  Background: Var(--Background-00);
 }
 
 Body > Header {
+  Position: Fixed;
+  Background: Var(--Background-01);
   Border-bottom: 1px Solid Var(--Gray-20);
 }
 
@@ -27,19 +29,9 @@ Body > Header {
   }
 }
 
-Body > Header > A {
-  Text-decoration: None;
-  Color: Inherit;
-  Gap: 7.5px;
-}
-
-Body > Header > A > Span {
-  Font-family: Var(--Font-UI);
-}
-
 Body > Article {
   Max-width: 950px;
-  Padding: 25px;
+  Padding: 146px 25px 25px 25px;
   Gap: 75px;
 }
 
@@ -50,6 +42,7 @@ Body > Article > H1 {
   Font-family: Var(--Font-Title);
   Font-weight: 500;
   Text-align: Center;
+  Line-height: 115%;
 }
 
 @media (min-width: 600px) {
@@ -83,6 +76,7 @@ Body > Article > .Authors {
   Gap: 25px;
   Justify-content: Space-evenly;
   Flex-wrap: Wrap;
+  Padding: 0 25px;
 }
 
 Body > Article > .Authors > * {

@@ -4,10 +4,12 @@
 
 Body
 {
-	Gap: 50px;
+	Background: Var(--Background-00);
 
 	& > Header
 	{
+		Position: Fixed;
+		Background: Var(--Background-01);
 		Border-bottom: 1px Solid Var(--Gray-20);
 
 		@media ($WideScreen)
@@ -19,24 +21,12 @@ Body
 		{
 			Padding: 20px;
 		}
-
-		& > A
-		{
-			// Position: Fixed;
-			@include Reset_A;
-			Gap: 7.5px;
-
-			& > Span
-			{
-				Font-family: Var(--Font-UI);
-			}
-		}
 	}
 
 	& > Article
 	{
 		Max-width: 950px;
-		Padding: 25px;
+		Padding: 146px 25px 25px 25px;
 		Gap: 75px;
 
 		& > H1
@@ -45,6 +35,7 @@ Body
 			Font-family: Var(--Font-Title);
 			Font-weight: 500;
 			Text-align: Center;
+			Line-height: 115%;
 
 			@media ($WideScreen)
 			{
@@ -78,6 +69,7 @@ Body
 			Gap: 25px;
 			Justify-content: Space-evenly;
 			Flex-wrap: Wrap;
+			Padding: 0 25px;
 
 			& > *
 			{

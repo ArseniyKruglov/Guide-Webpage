@@ -66,6 +66,11 @@ A.Text.Icon > Custom-icon {
   --Scale: 20px;
 }
 
+Button.Text.Icon > Span,
+A.Text.Icon > Span {
+  Font-family: Var(--Font-UI);
+}
+
 Button.Text.Main,
 A.Text.Main {
   Color: Var(--Main-UI);
@@ -84,8 +89,8 @@ Button.Text.Gray:not(:hover) > Custom-icon *,
 A.Text.Gray:not(:hover),
 A.Text.Gray:not(:hover) > Span,
 A.Text.Gray:not(:hover) > Custom-icon * {
-  Color: Var(--Gray-80);
-  Fill: Var(--Gray-80);
+  Color: Var(--Gray-70);
+  Fill: Var(--Gray-70);
 }
 
 Button.Text.Outlined,

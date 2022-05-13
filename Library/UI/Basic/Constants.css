@@ -21,6 +21,9 @@
   --Gray-85: HSL(220, 10%, 15%);
   --Gray-90: HSL(220, 10%, 10%);
   --Gray-95: HSL(220, 10%, 5%);
+  --Background-00: #FFFFFF;
+  --Background-01: #FFFFFF;
+  --Background-02: #FFFFFF;
   --Main: HSL(Var(--Hue), Var(--Saturation), Var(--Lightness));
   --Main-UI: HSL(Var(--Hue), Calc(Var(--Saturation) * 1.1), Var(--Lightness));
   --Main-UI-Hover: HSL(Var(--Hue), Calc(Var(--Saturation) * 1.1), Calc(Var(--Lightness) * 0.75));
@@ -51,5 +54,8 @@
     --Gray-85: HSL(220, 10%, 85%);
     --Gray-90: HSL(220, 10%, 90%);
     --Gray-95: HSL(220, 10%, 95%);
+    --Background-00: Var(--Gray-5);
+    --Background-01: Var(--Gray-10);
+    --Background-02: Var(--Gray-15);
   }
 }
