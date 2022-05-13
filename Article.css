@@ -1,0 +1,49 @@
+HTML {
+  Width: 100%;
+  Height: 100%;
+}
+
+Body {
+  Margin: 0;
+}
+
+Body > Article {
+  Max-width: 950px;
+  Padding: 25px;
+  Gap: 50px;
+}
+
+Body > Article > H1 {
+  Margin: 0;
+  Font-weight: 400;
+  Font-size: 16px;
+  Font-family: Var(--Font-Title);
+  Font-weight: 500;
+  Font-size: 36px;
+  Text-align: Center;
+}
+
+Body > Article P {
+  Margin-top: 0;
+  Font-family: Var(--Font-Text);
+}
+
+Body > Article > P {
+  Font-size: 15.5px;
+  Padding: 0 25px;
+}
+
+@media (min-width: 600px) {
+  Body > Article > Div {
+    Column-count: 2;
+  }
+}
+
+Body > Article > Div > H2 {
+  Margin: 0;
+  Font-weight: 400;
+  Font-size: 16px;
+  Text-align: center;
+  Font-size: 22px;
+  Margin-bottom: 10px;
+}

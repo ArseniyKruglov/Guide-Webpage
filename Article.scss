@@ -1,0 +1,50 @@
+@import 'Library/UI/Basic/Body.scss';
+@import 'Library/UI/Basic/Reset.scss';
+@import 'Library/UI/Basic/Media.scss';
+
+Body
+{
+	& > Article
+	{
+		Max-width: 950px;
+		Padding: 25px;
+		Gap: 50px;
+
+		& > H1
+		{
+			@include Reset_H;
+			Font-family: Var(--Font-Title);
+			Font-weight: 500;
+			Font-size: 36px;
+			Text-align: Center;
+		}
+
+		P
+		{
+			Margin-top: 0;	// TO DO: Reset
+			Font-family: Var(--Font-Text);
+		}
+
+		& > P
+		{
+			Font-size: 15.5px;
+			Padding: 0 25px;
+		}
+
+		& > Div
+		{
+			@media ($WideScreen)
+			{
+				Column-count: 2;
+			}
+
+			& > H2
+			{
+				@include Reset_H;
+				Text-align: center;
+				Font-size: 22px;
+				Margin-bottom: 10px;
+			}
+		}
+	}
+}

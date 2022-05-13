@@ -1,6 +1,5 @@
-@import 'Library/UI/Basic/Reset.scss';
-// @import 'Library/UI/Basic/Media.scss';
 @import 'Library/UI/Basic/Body.scss';
+@import 'Library/UI/Basic/Reset.scss';
 
 Main
 {
@@ -55,9 +54,10 @@ Main
 
 				& > Img
 				{
-					Clip-path: Circle(45px);
+					Clip-path: Circle(44px);
 					Width: 90px;
 					Height: 90px;
+					Background-color: Var(--Fallback, Var(--Gray-15));
 				}
 
 				& > Div
