@@ -22,11 +22,18 @@
 		<Link Href='https://fonts.googleapis.com/css?family=Google+Sans:500|Playfair+Display:400,500|Lora:400,500' Rel='Stylesheet'>
 	</Head>
 
-	<Body AutoLayout Direction='Horizontal' Width='Fill' Height='Fill' AlignX='Center'>
+	<Body AutoLayout Direction='Vertical' Width='Fill' Height='Fill' AlignX='Center'>
+		<Header AutoLayout Direction='Vertical' Width='Fill' Height='Fit'>
+			<A Href='Contents' AutoLayout Direction='Horizontal' AlignY='Center' Class='Text Gray'>
+				<SVG height='24px' viewBox='0 0 24 24' width='24px'><path d='M4 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm0-6c-.83 0-1.5.67-1.5 1.5S3.17 7.5 4 7.5 5.5 6.83 5.5 6 4.83 4.5 4 4.5zm0 12c-.83 0-1.5.68-1.5 1.5s.68 1.5 1.5 1.5 1.5-.68 1.5-1.5-.67-1.5-1.5-1.5zM7 19h14v-2H7v2zm0-6h14v-2H7v2zm0-8v2h14V5H7z'/></SVG>
+				<Span>Оглавление</Span>
+			</A>
+		</Header>
+
 		<Article AutoLayout Direction='Vertical' Width='Fit' Height='Fill'>
 			<H1>Черные дыры и нейтронные звезды в осциллирующей вселенной</H1>
 
-			<P>
+			<P Class='Introduction'>
 				В последние годы вновь активно рассматриваются гипотезы о возможной цикличности Вселенной.
 				В этих космологических теориях Вселенная, вместо «одноразового» бесконечного расширения,
 				периодически сжимается до какого-то объема, а потом снова испытывает Большой Взрыв. Одной из
@@ -52,7 +59,16 @@
 				возможность их поиска в разных диапазонах длин волн.
 			</P>
 
-			<Div>
+			<HR>
+
+			<Div Class='Authors' AutoLayout Direction='Horizontal'>
+				<Div>Н. Н. Горькавый</Div>
+				<Div>С. А. Тюльбашев</Div>
+			</Div>
+
+			<HR>
+
+			<Div Class='Body'>
 				<H2>1. Введение</H2>
 				<P>
 					Черные дыры являются одной из главных компонент Вселенной. Хорошо известно, что черные

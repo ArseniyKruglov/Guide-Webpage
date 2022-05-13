@@ -7,10 +7,40 @@ Body {
   Margin: 0;
 }
 
+Body {
+  Gap: 50px;
+}
+
+Body > Header {
+  Border-bottom: 1px Solid Var(--Gray-20);
+}
+
+@media (min-width: 600px) {
+  Body > Header {
+    Padding: 20px 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  Body > Header {
+    Padding: 20px;
+  }
+}
+
+Body > Header > A {
+  Text-decoration: None;
+  Color: Inherit;
+  Gap: 7.5px;
+}
+
+Body > Header > A > Span {
+  Font-family: Var(--Font-UI);
+}
+
 Body > Article {
   Max-width: 950px;
   Padding: 25px;
-  Gap: 50px;
+  Gap: 75px;
 }
 
 Body > Article > H1 {
@@ -19,31 +49,63 @@ Body > Article > H1 {
   Font-size: 16px;
   Font-family: Var(--Font-Title);
   Font-weight: 500;
-  Font-size: 36px;
   Text-align: Center;
 }
 
+@media (min-width: 600px) {
+  Body > Article > H1 {
+    Font-size: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  Body > Article > H1 {
+    Font-size: 32px;
+  }
+}
+
 Body > Article P {
-  Margin-top: 0;
+  Margin: 0;
   Font-family: Var(--Font-Text);
 }
 
 Body > Article > P {
   Font-size: 15.5px;
-  Padding: 0 25px;
 }
 
 @media (min-width: 600px) {
-  Body > Article > Div {
+  Body > Article > P {
+    Padding: 0 25px;
+  }
+}
+
+Body > Article > .Authors {
+  Gap: 25px;
+  Justify-content: Space-evenly;
+  Flex-wrap: Wrap;
+}
+
+Body > Article > .Authors > * {
+  Font-size: 24px;
+  Font-family: Var(--Font-Title);
+  Font-weight: 500;
+}
+
+@media (min-width: 600px) {
+  Body > Article > .Body {
     Column-count: 2;
   }
 }
 
-Body > Article > Div > H2 {
+Body > Article > .Body > H2 {
   Margin: 0;
   Font-weight: 400;
   Font-size: 16px;
   Text-align: center;
   Font-size: 22px;
   Margin-bottom: 10px;
+}
+
+Body > Article > .Body > P:not(:last-child) {
+  Margin-bottom: 15px;
 }

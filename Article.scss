@@ -4,34 +4,90 @@
 
 Body
 {
+	Gap: 50px;
+
+	& > Header
+	{
+		Border-bottom: 1px Solid Var(--Gray-20);
+
+		@media ($WideScreen)
+		{
+			Padding: 20px 30px;
+		}
+
+		@media ($NarrowScreen)
+		{
+			Padding: 20px;
+		}
+
+		& > A
+		{
+			// Position: Fixed;
+			@include Reset_A;
+			Gap: 7.5px;
+
+			& > Span
+			{
+				Font-family: Var(--Font-UI);
+			}
+		}
+	}
+
 	& > Article
 	{
 		Max-width: 950px;
 		Padding: 25px;
-		Gap: 50px;
+		Gap: 75px;
 
 		& > H1
 		{
 			@include Reset_H;
 			Font-family: Var(--Font-Title);
 			Font-weight: 500;
-			Font-size: 36px;
 			Text-align: Center;
+
+			@media ($WideScreen)
+			{
+				Font-size: 36px;
+			}
+
+			@media ($NarrowScreen)
+			{
+				Font-size: 32px;
+			}
 		}
 
 		P
 		{
-			Margin-top: 0;	// TO DO: Reset
+			Margin: 0;	// TO DO: Reset
 			Font-family: Var(--Font-Text);
 		}
 
 		& > P
 		{
 			Font-size: 15.5px;
-			Padding: 0 25px;
+
+			@media ($WideScreen)
+			{
+				Padding: 0 25px;
+			}
 		}
 
-		& > Div
+		& > .Authors
+		{
+			Gap: 25px;
+			Justify-content: Space-evenly;
+			Flex-wrap: Wrap;
+
+			& > *
+			{
+				Font-size: 24px;
+				Font-family: Var(--Font-Title);
+				Font-weight: 500;
+			}
+		}
+
+		& > .Body
 		{
 			@media ($WideScreen)
 			{
@@ -44,6 +100,14 @@ Body
 				Text-align: center;
 				Font-size: 22px;
 				Margin-bottom: 10px;
+			}
+
+			& > P
+			{
+				&:not(:last-child)
+				{
+					Margin-bottom: 15px;
+				}
 			}
 		}
 	}

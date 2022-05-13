@@ -7,8 +7,16 @@ Body {
   Margin: 0;
 }
 
-Header {
-  Padding: 20px 30px;
+@media (min-width: 600px) {
+  Header {
+    Padding: 20px 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  Header {
+    Padding: 20px;
+  }
 }
 
 Header > A {
