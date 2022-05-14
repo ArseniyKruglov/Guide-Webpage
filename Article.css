@@ -1,3 +1,4 @@
+@charset "UTF-8";
 HTML {
   Width: 100%;
   Height: 100%;
@@ -13,8 +14,9 @@ Body {
 
 Body > Header {
   Position: Fixed;
-  Background: Var(--Background-01);
+  Background-color: Var(--Background-01);
   Border-bottom: 1px Solid Var(--Gray-20);
+  Gap: 10px;
 }
 
 @media (min-width: 600px) {
@@ -62,12 +64,12 @@ Body > Article P {
   Font-family: Var(--Font-Text);
 }
 
-Body > Article > P {
-  Font-size: 15.5px;
+Body > Article > P.Introduction {
+  Font-size: 15.75px;
 }
 
 @media (min-width: 600px) {
-  Body > Article > P {
+  Body > Article > P.Introduction {
     Padding: 0 25px;
   }
 }
@@ -88,18 +90,57 @@ Body > Article > .Authors > * {
 @media (min-width: 600px) {
   Body > Article > .Body {
     Column-count: 2;
+    Column-gap: 75px;
   }
+}
+
+Body > Article > .Body > :not(:last-child) {
+  Margin-bottom: 15px;
 }
 
 Body > Article > .Body > H2 {
   Margin: 0;
   Font-weight: 400;
   Font-size: 16px;
-  Text-align: center;
+  Text-align: Center;
   Font-size: 22px;
-  Margin-bottom: 10px;
 }
 
-Body > Article > .Body > P:not(:last-child) {
+Body > Article > .Body P.Highlighted {
+  Border-left: 3.5px Solid HSL(Var(--Hue), Calc(Var(--Saturation) * 0.75), Var(--Lightness));
+  Padding: 10px 10px 10px 20px;
+}
+
+Body > Article > .Body UL {
+  Margin: 0;
+  Padding-left: 15px;
+}
+
+Body > Article > .Body UL > LI:not(:last-child) {
   Margin-bottom: 15px;
+}
+
+Body > Article > .Body UL > LI::marker {
+  Content: '− ';
+}
+
+Body > Article > .Body Blockquote {
+  Margin: 0;
+  Background-color: HSL(220, 10%, 99%);
+  -webkit-box-shadow: 0 1px 1px 0 RGB(0 0 0/20%), 0 1px 2px 1px RGB(0 0 0/10%);
+          box-shadow: 0 1px 1px 0 RGB(0 0 0/20%), 0 1px 2px 1px RGB(0 0 0/10%);
+  Padding: 25px;
+  Gap: 25px;
+}
+
+Body > Article > .Body Blockquote > .Text {
+  Text-align: Center;
+}
+
+Body > Article > .Body Blockquote > HR {
+  Width: 25px !important;
+}
+
+Body > Article > .Body Blockquote > .Author {
+  Font-family: Var(--Font-Title);
 }

@@ -1,0 +1,14 @@
+Custom-Icon {
+  --Icon-Scale: 24px;
+  --Icon-Color: Var(--Text);
+}
+
+Custom-Icon,
+Custom-Icon > SVG {
+  Width: Var(--Icon-Scale);
+  Height: Var(--Icon-Scale);
+}
+
+Custom-Icon > SVG {
+  Fill: Var(--Icon-Color);
+}

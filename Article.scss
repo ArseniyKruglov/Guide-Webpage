@@ -9,8 +9,9 @@ Body
 	& > Header
 	{
 		Position: Fixed;
-		Background: Var(--Background-01);
+		Background-color: Var(--Background-01);
 		Border-bottom: 1px Solid Var(--Gray-20);
+		Gap: 10px;
 
 		@media ($WideScreen)
 		{
@@ -50,13 +51,13 @@ Body
 
 		P
 		{
-			Margin: 0;	// TO DO: Reset
+			@include Reset_P;
 			Font-family: Var(--Font-Text);
 		}
 
-		& > P
+		& > P.Introduction
 		{
-			Font-size: 15.5px;
+			Font-size: 15.75px;
 
 			@media ($WideScreen)
 			{
@@ -84,21 +85,70 @@ Body
 			@media ($WideScreen)
 			{
 				Column-count: 2;
+				Column-gap: 75px;
+			}
+
+			& > :not(:last-child)
+			{
+				Margin-bottom: 15px;
 			}
 
 			& > H2
 			{
 				@include Reset_H;
-				Text-align: center;
+				Text-align: Center;
 				Font-size: 22px;
-				Margin-bottom: 10px;
 			}
 
-			& > P
+			P
 			{
-				&:not(:last-child)
+				&.Highlighted
 				{
-					Margin-bottom: 15px;
+					Border-left: 3.5px Solid unquote('HSL(Var(--Hue), Calc(Var(--Saturation) * 0.75), Var(--Lightness))');
+					Padding: 10px 10px 10px 20px;
+				}
+			}
+
+			UL
+			{
+				Margin: 0;
+				Padding-left: 15px;
+
+				& > LI
+				{
+					&:not(:last-child)
+					{
+						Margin-bottom: 15px;
+					}
+
+					&::marker
+					{
+						Content: '− ';	// TO DO: Margin
+					}
+				}
+			}
+
+			Blockquote
+			{
+				@include Reset_Blockquote;
+				Background-color: HSL(220, 10%, 99%);
+				box-shadow: 0 1px 1px 0 RGB(0 0 0 / 20%),0 1px 2px 1px RGB(0 0 0 / 10%);
+				Padding: 25px;
+				Gap: 25px;
+
+				& > .Text
+				{
+					Text-align: Center;
+				}
+
+				& > HR
+				{
+					Width: 25px !important;
+				}
+
+				& > .Author
+				{
+					Font-family: Var(--Font-Title);
 				}
 			}
 		}
