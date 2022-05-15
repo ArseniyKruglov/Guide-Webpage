@@ -1,0 +1,42 @@
+@import 'Library/UI/Basic/Reset.scss';
+@import 'Library/UI/Basic/Media.scss';
+
+Body
+{
+	Gap: 25px;
+	Background-color: HSL(36, 15%, 95%);
+
+	@media ($WideScreen)
+	{
+		Padding: 50px;
+	}
+
+	@media ($NarrowScreen)
+	{
+		Padding: 20px;
+	}
+
+	& > H1
+	{
+		@include Reset_H;
+		Font-size: 32px;
+		Font-family: Var(--Font-Title);
+	}
+
+	& > UL
+	{
+		@include Reset_UL;
+		Padding-left: 35px;
+		Font-family: Var(--Font-Text);
+
+		LI
+		{
+			Margin-top: 7.5px;
+
+			&::marker
+			{
+				Content: '−   ';
+			}
+		}
+	}
+}

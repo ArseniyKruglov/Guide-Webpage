@@ -9,7 +9,7 @@ Body {
 }
 
 Body {
-  Background: Var(--Background-00);
+  Background-color: HSL(36, 15%, 95%);
 }
 
 Body > Header {

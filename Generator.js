@@ -5,6 +5,7 @@ function Template(Title, Body, CSS, JS, Fonts)
 	CSS =
 	[
 		...CSS,
+		'Library/UI/Basic/Body',
 		'Library/UI/Basic/AutoLayout',
 		'Library/UI/Basic/Constants',
 		'Library/UI/Basic/Fonts',
@@ -64,6 +65,8 @@ function DrawIndex(Articles)
 			</Main>
 		 </Body>`,
 		[
+			'Library/UI/Components/Buttons/Cursor',
+			'Library/UI/Components/Buttons/Text',
 			'index'
 		],
 		[],
@@ -122,6 +125,45 @@ function DrawAuthors(Authors)
 	);
 }
 
+function DrawContent(Articles)
+{
+	return Template
+	(
+		'Оглавление',
+		`<Body AutoLayout Direction='Vertical'>
+			<H1>Оглавление</H1>
+
+			<UL>
+			<LI>
+				Формирование и развитие умений и навыков
+				<UL>
+				<LI>Movement</LI>
+					<UL>
+					<LI>KZ</LI>
+					<LI>Hide'n'Seek</LI>
+					<LI>Surf</LI>
+					<LI>Bhop</LI>
+					<LI>Различные карты</LI>
+						<UL>
+						<LI>Карты с ботами</LI>
+						<LI>Карты с префаерами</LI>
+						<LI>Карты с тренировкой стрельбы</LI>
+						<LI>Карты с тренировкой стрейфов, прыжков</LI>
+						<LI>Карты с передвижением по карте</LI>
+						</UL>
+					</UL>
+				</UL>
+			</LI>
+			</UL>
+		 </Body>`,
+		[
+			'Content'
+		],
+		[],
+		'Google+Sans:500|Playfair+Display:400,500|Lora:400'
+	);
+}
+
 function DrawArticle(Title, Introduction, Authors, Body)
 {
 	return Template
@@ -129,15 +171,10 @@ function DrawArticle(Title, Introduction, Authors, Body)
 		Title,
 		`<Body AutoLayout Direction='Vertical' Width='Fill' Height='Fill' AlignX='Center'>
 			<Header AutoLayout Direction='Horizontal' Width='Fill' Height='Fit' Packing='Space between'>
-				<Button Class='Text Icon'>
+				<A Href='Content' Class='Text Icon'>
 					<Custom-icon Icon='Receipt Long'></Custom-icon>
 					<Span>Оглавление</Span>
-				</Button>
-
-				<Button Class='Text Icon'>
-					<Custom-icon Icon='List'></Custom-icon>
-					<Span>Содержание</Span>
-				</Button>
+				</A>
 			</Header>
 
 			<Article AutoLayout Direction='Vertical' Width='Fit' Height='Fill'>
@@ -238,7 +275,10 @@ const Articles =
 const FileSystem = require('fs');
 
 FileSystem.writeFileSync('index.html', DrawIndex(Articles));
+
 FileSystem.writeFileSync('Authors.html', DrawAuthors(Authors));
+
+FileSystem.writeFileSync('Content.html', DrawContent(Articles));
 
 for (let Article of Articles)
 	FileSystem.writeFileSync(`Article-${Article.Name}.html`, DrawArticle(Article.Name, Article.Introduction, Article.Authors, Article.Body));
