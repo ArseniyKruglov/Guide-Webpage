@@ -103,7 +103,7 @@ Body > Article > .Body > H2 {
   Font-weight: 400;
   Font-size: 16px;
   Text-align: Center;
-  Font-size: 22px;
+  Font-size: 20.5px;
 }
 
 Body > Article > .Body P.Highlighted {
@@ -121,7 +121,7 @@ Body > Article > .Body UL > LI:not(:last-child) {
 }
 
 Body > Article > .Body UL > LI::marker {
-  Content: '− ';
+  Content: '−   ';
 }
 
 Body > Article > .Body Blockquote {

@@ -97,7 +97,7 @@ Body
 			{
 				@include Reset_H;
 				Text-align: Center;
-				Font-size: 22px;
+				Font-size: 20.5px;
 			}
 
 			P
@@ -123,7 +123,7 @@ Body
 
 					&::marker
 					{
-						Content: '− ';	// TO DO: Margin
+						Content: '−   ';	// TO DO: Margin
 					}
 				}
 			}
