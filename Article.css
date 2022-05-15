@@ -113,7 +113,7 @@ Body > Article > .Body P.Highlighted {
 
 Body > Article > .Body UL {
   Margin: 0;
-  Padding-left: 15px;
+  Padding-left: 25px;
 }
 
 Body > Article > .Body UL > LI:not(:last-child) {

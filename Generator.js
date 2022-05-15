@@ -1,4 +1,4 @@
-function Template(Title, Body, CSS, JS, Meta, Fonts)
+function Template(Title, Body, CSS, JS, Fonts)
 {
 	return     `<!DOCTYPE HTML>
 
@@ -9,6 +9,7 @@ function Template(Title, Body, CSS, JS, Meta, Fonts)
 					<Link Rel='Icon' Href='https://cdnjs.cloudflare.com/ajax/libs/simple-icons/3.2.0/counter-strike.svg'>
 					<Meta Charset='UTF-8'>
 					<Meta Name='Viewport' Content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+					<Link Rel='Manifest' Href='/Manifest.webmanifest'>
 
 					${
 						CSS.map(CSS => `<Link Rel='Stylesheet' Href='${CSS}.css'>`).join('')
@@ -27,7 +28,7 @@ function Template(Title, Body, CSS, JS, Meta, Fonts)
 			</HTML>`.replace(/\t|\n/g, '').replace(/> +</g, '><');
 }
 
-function Article(Title, Introduction, Authors, Body, Keywords, CSS, JS)
+function Article(Title, Introduction, Authors, Body, CSS, JS)
 {
 	return Template
 	(
@@ -79,7 +80,6 @@ function Article(Title, Introduction, Authors, Body, Keywords, CSS, JS)
 		[
 			'Library/UI/Components/Icon/Icon',
 		],
-		undefined,
 		'Google+Sans:500|Playfair+Display:400,500|Lora:400'
 	);
 }
@@ -115,6 +115,5 @@ FileSystem.writeFileSync('Article.html', Article
 		<LI>
 			Сон — путь к счастливой жизни. Сон является неотъемлемой частью нашей жизни. Благодаря сну мы можем восстановить свои физические и моральные силы, подумать о чем-то или просто перезагрузить свой мозг. Что Counter-Strike отличает от реального спорта ? В спорте мы устаем физически. Восстановление сил проходит куда легче и быстрее, чем восстановление моральных сил. В Counter-Strike мы напрягаем мозг и свою нервную систему. На восстановление ментального здоровья требуется намного больше сил и времени. И один из способов восстановления — это сон.
 		</LI>
-	 </UL>`,
-	 []
+	 </UL>`
 ));

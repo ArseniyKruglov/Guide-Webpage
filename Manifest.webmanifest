@@ -1,0 +1,9 @@
+{
+	"name": "Практическое пособие по Counter-Strike",
+	"short_name": "Пособие",
+	"theme_color": "#FFFFFF",
+	"background_color": "#FFFFFF",
+	"display": "standalone",
+	"scope": "/Article",
+	"start_url": "/Article"
+}
