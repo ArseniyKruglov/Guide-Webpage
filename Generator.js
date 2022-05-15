@@ -9,7 +9,7 @@ function Template(Title, Body, CSS, JS, Fonts)
 					<Link Rel='Icon' Href='https://cdnjs.cloudflare.com/ajax/libs/simple-icons/3.2.0/counter-strike.svg'>
 					<Meta Charset='UTF-8'>
 					<Meta Name='Viewport' Content='width=device-width, initial-scale=1, shrink-to-fit=no'>
-					<Link Rel='Manifest' Href='/Manifest.webmanifest'>
+					<Link Rel='Manifest' Href='Manifest.webmanifest'>
 
 					${
 						CSS.map(CSS => `<Link Rel='Stylesheet' Href='${CSS}.css'>`).join('')
