@@ -12,16 +12,7 @@ Body
 		Background-color: Var(--Background-01);
 		Border-bottom: 1px Solid Var(--Gray-20);
 		Gap: 10px;
-
-		@media ($WideScreen)
-		{
-			Padding: 20px 30px;
-		}
-
-		@media ($NarrowScreen)
-		{
-			Padding: 20px;
-		}
+		Padding: 20px;
 	}
 
 	& > Article
