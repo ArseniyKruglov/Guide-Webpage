@@ -11,9 +11,7 @@ function Template(Title, Body, CSS, JS, Fonts)
 					<Meta Name='Viewport' Content='width=device-width, initial-scale=1, shrink-to-fit=no'>
 					<Link Rel='Manifest' Href='Manifest.webmanifest'>
 
-					${
-						CSS.map(CSS => `<Link Rel='Stylesheet' Href='${CSS}.css'>`).join('')
-					}
+					${CSS.map(CSS => `<Link Rel='Stylesheet' Href='${CSS}.css'>`).join('')}
 
 					<Link Rel='Preconnect' Href='https://fonts.googleapis.com'>
 					<Link Rel='Preconnect' Href='https://fonts.gstatic.com' Crossorigin>
@@ -22,9 +20,7 @@ function Template(Title, Body, CSS, JS, Fonts)
 
 				${Body}
 
-				${
-					JS.map(JS => `<Script Src='${JS}.js'></Script>`).join('')
-				}
+				${JS.map(JS => `<Script Src='${JS}.js'></Script>`).join('')}
 			</HTML>`.replace(/\t|\n/g, '').replace(/> +</g, '><');
 }
 

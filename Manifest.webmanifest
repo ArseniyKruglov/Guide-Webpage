@@ -4,6 +4,12 @@
 	"theme_color": "#FFFFFF",
 	"background_color": "#FFFFFF",
 	"display": "standalone",
-	"scope": "/Article",
-	"start_url": "/Article"
+	"scope": "/Guide-Webpage/Article",
+	"start_url": "/Guide-Webpage/Article",
+	"icons": [
+		{
+		    "src": "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/3.2.0/counter-strike.svg",
+		    "sizes": "any"
+		}
+	  ]
 }
