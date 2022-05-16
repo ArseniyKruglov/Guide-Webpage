@@ -4,7 +4,7 @@
 
 Body
 {
-	Background-color: HSL(36, 15%, 95%);
+	Background-color: Var(--Background-00);
 
 	& > Header
 	{
@@ -91,14 +91,14 @@ Body
 				Font-size: 20.5px;
 			}
 
-			P
-			{
-				&.Highlighted
-				{
-					Border-left: 3.5px Solid unquote('HSL(Var(--Hue), Calc(Var(--Saturation) * 0.75), Var(--Lightness))');
-					Padding: 10px 10px 10px 20px;
-				}
-			}
+			// P
+			// {
+			// 	&.Highlighted
+			// 	{
+			// 		Border-left: 3.5px Solid unquote('HSL(Var(--Hue), Calc(Var(--Saturation) * 0.75), Var(--Lightness))');
+			// 		Padding: 10px 10px 10px 20px;
+			// 	}
+			// }
 
 			UL
 			{

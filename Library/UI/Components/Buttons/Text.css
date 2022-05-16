@@ -71,7 +71,7 @@ A.Text.Icon > Span {
 
 Button.Text.Icon,
 A.Text.Icon {
-  Display: Flex;
+  Display: Inline-flex;
   Align-items: Center;
   Gap: 7.5px;
 }
@@ -80,6 +80,17 @@ Button.Text.Icon > Custom-icon,
 A.Text.Icon > Custom-icon {
   --Icon-Color: Var(--Button-Color);
   --Icon-Scale: 20px;
+}
+
+Button.Text.Icon > SVG,
+A.Text.Icon > SVG {
+  Width: 20px;
+  Height: 20px;
+}
+
+Button.Text.Icon > SVG *,
+A.Text.Icon > SVG * {
+  Fill: Var(--Button-Color);
 }
 
 Button.Text.Outlined,
