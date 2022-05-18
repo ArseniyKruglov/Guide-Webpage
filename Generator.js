@@ -49,19 +49,19 @@ function DrawIndex(Articles)
 			<Main AutoLayout Direction='Vertical' Width='Fill' Height='Fill' AlignX='Center' AlignY='Center'>
 				<H1>Введение в соревновательный Counter-Strike</H1>
 
-			${
-				Articles.map(Article =>
-				`<Div ID='Features' AutoLayout Direction='Horizontal' AlignX='Center'>
-					<Div Class='Feature' AutoLayout Direction='Vertical' Width='Fit' Height='Fill'>
+				<Div ID='Features' AutoLayout Direction='Horizontal' AlignX='Center'>
+				${
+					Articles.map(Article =>
+					`<Div Class='Feature' AutoLayout Direction='Vertical' Width='Fit' Height='Fill'>
 						<Div AutoLayout Direction='Vertical'>
 							<H2>${Article.Name}</H2>
 							<Div>${Article.Hub}</Div>
 						</Div>
 
 						<A Href='Article-${Article.Name}' Class='Text Main'>Читать</A>
-					</Div>
-				 </Div>`).join('')
-			}
+					 </Div>`).join('')
+				}
+				</Div>
 			</Main>
 		 </Body>`,
 		[
