@@ -27,12 +27,32 @@ Body > UL {
   Margin: 0;
   Padding-left: 35px;
   Font-family: Var(--Font-Text);
+  Overflow-X: Auto;
+  Overflow-Y: Hidden;
+}
+
+Body > UL UL {
+  Padding-left: 100px;
+  Border-left: 1px Solid Var(--Gray-10);
+  Margin-left: -22.5px;
 }
 
 Body > UL LI {
   Margin-top: 7.5px;
+  White-space: Nowrap;
 }
 
 Body > UL LI::marker {
   Content: '−   ';
+}
+
+Body A {
+  Text-decoration: None;
+  Color: Inherit;
+  Border-bottom: 1px Solid Var(--Text);
+  Transition: 100ms;
+}
+
+Body A:hover {
+  Color: Var(--Main);
 }

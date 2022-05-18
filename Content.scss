@@ -27,15 +27,37 @@ Body
 		@include Reset_UL;
 		Padding-left: 35px;
 		Font-family: Var(--Font-Text);
+		Overflow-X: Auto;
+		Overflow-Y: Hidden;
+
+		UL
+		{
+			Padding-left: 100px;
+			Border-left: 1px Solid Var(--Gray-10);
+			Margin-left: -22.5px;
+		}
 
 		LI
 		{
 			Margin-top: 7.5px;
+			White-space: Nowrap;
 
 			&::marker
 			{
 				Content: '−   ';
 			}
+		}
+	}
+
+	A
+	{
+		@include Reset_A;
+		Border-bottom: 1px Solid Var(--Text);
+		Transition: 100ms;
+
+		&:hover
+		{
+			Color: Var(--Main);
 		}
 	}
 }

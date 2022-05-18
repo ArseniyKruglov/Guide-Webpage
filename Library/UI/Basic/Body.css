@@ -1,6 +1,7 @@
 HTML {
   Width: 100%;
   Height: 100%;
+  Overflow-X: Hidden;
 }
 
 Body {

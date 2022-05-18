@@ -1,15 +1,3 @@
-Body {
-  --Background00: #FFFFFF;
-  --Background01: #FFFFFF;
-}
-
-@Media (Prefers-color-scheme: Dark) {
-  Body {
-    --Background00: HSL(225, 6%, 7.5%);
-    --Background01: HSL(225, 6%, 12.5%);
-  }
-}
-
 #Notifications {
   Position: Absolute;
   Top: 0;
@@ -22,7 +10,7 @@ Body {
 
 #Notifications .Notification {
   Z-Index: 2;
-  Background-Color: Var(--Background01);
+  Background-Color: Var(--Background-02);
   Box-Shadow: 0 1px 3px HSLA(0, 0%, 0%, 25%), 0 4px 12px HSLA(0, 0%, 0%, 10%);
   Gap: 10px;
   Border-radius: 5px;
