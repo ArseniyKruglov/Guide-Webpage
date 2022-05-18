@@ -249,7 +249,7 @@ function DrawArticle(Title, Introduction, Authors, Body)
 			</Header>
 
 			<Article AutoLayout Direction='Vertical' Width='Fit' Height='Fill'>
-				<H1>Коммуникация</H1>
+				<H1>${Title}</H1>
 
 				<P Class='Introduction'>
 					${Introduction}
