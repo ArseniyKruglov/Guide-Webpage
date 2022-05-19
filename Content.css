@@ -1,17 +1,15 @@
 @charset "UTF-8";
-Body {
-  Gap: 25px;
-}
-
 @media (min-width: 600px) {
   Body {
-    Padding: 50px;
+    Gap: 100px;
+    Padding: 100px 0 100px 50px;
   }
 }
 
 @media (max-width: 600px) {
   Body {
-    Padding: 20px;
+    Gap: 50px;
+    Padding: 50px 0 50px 20px;
   }
 }
 
@@ -19,16 +17,38 @@ Body > H1 {
   Margin: 0;
   Font-weight: 400;
   Font-size: 16px;
-  Font-size: 32px;
   Font-family: Var(--Font-Title);
+}
+
+@media (min-width: 600px) {
+  Body > H1 {
+    Font-size: 38px;
+  }
+}
+
+@media (max-width: 600px) {
+  Body > H1 {
+    Font-size: 32px;
+  }
 }
 
 Body > UL {
   Margin: 0;
   Padding-left: 35px;
   Font-family: Var(--Font-Text);
-  Overflow-X: Auto;
-  Overflow-Y: Hidden;
+  Margin: Auto;
+}
+
+@media (min-width: 600px) {
+  Body > UL {
+    Padding-right: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  Body > UL {
+    Padding-right: 20px;
+  }
 }
 
 Body > UL UL {
@@ -42,7 +62,11 @@ Body > UL LI {
   White-space: Nowrap;
 }
 
-Body > UL LI::marker {
+Body > UL LI.Hub::marker {
+  Content: '○   ';
+}
+
+Body > UL LI:not(.Hub)::marker {
   Content: '−   ';
 }
 

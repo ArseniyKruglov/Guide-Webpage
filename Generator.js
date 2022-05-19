@@ -130,20 +130,22 @@ function DrawContent(Articles)
 	return Template
 	(
 		'Оглавление',
-		`<Body AutoLayout Direction='Vertical'>
+		`<Body AutoLayout Direction='Vertical' AlignX='Center'>
 			<H1>Оглавление</H1>
 
+			<HR>
+
 			<UL>
-			<LI>
+			<LI Class='Hub'>
 			Формирование и развитие умений и навыков
 				<UL>
-				<LI><A Href='Article-Movement'>Movement</A>
+				<LI Class='Hub'><A Href='Article-Movement'>Movement</A>
 					<UL>
 					<LI>KZ</LI>
 					<LI>Hide'n'Seek</LI>
 					<LI>Surf</LI>
 					<LI>Bhop</LI>
-					<LI>Различные карты
+					<LI Class='Hub'>Различные карты
 						<UL>
 						<LI>Карты с ботами</LI>
 						<LI>Карты с префаерами</LI>
@@ -156,12 +158,12 @@ function DrawContent(Articles)
 					<LI>Геометрия игры</LI>
 					</UL>
 				</LI>
-				<LI>Стрельба
+				<LI Class='Hub'>Стрельба
 					<UL>
 					<LI>Флики</LI>
 					<LI>Быстрая наводка</LI>
 					<LI>Медленная наводка</LI>
-					<LI>Различные режимы
+					<LI Class='Hub'>Различные режимы
 						<UL>
 						<LI>KZ</LI>
 						<LI>Hide'n'Seek</LI>
@@ -170,7 +172,7 @@ function DrawContent(Articles)
 						</UL>
 					</LI>
 					<LI>Залипание прицела на голове</LI>
-					<LI>Различные режимы
+					<LI Class='Hub'>Различные режимы
 						<UL>
 						<LI>DM</LI>
 						<LI>HSDM</LI>
@@ -179,14 +181,14 @@ function DrawContent(Articles)
 						<LI>Retake</LI>
 						</UL>
 					</LI>
-					<LI>Различные карты
+					<LI Class='Hub'>Различные карты
 						<UL>
 						<LI>Карты с ботами</LI>
 						<LI>Карты с префаерами</LI>
 						<LI>Карты с точками</LI>
 						<LI>Пустые карты</LI>
 						<LI>Карты со спреем</LI>
-						<LI>Виды стрельбы
+						<LI Class='Hub'>Виды стрельбы
 							<UL>
 							<LI>Tapping</LI>
 							<LI>Bursting</LI>
@@ -195,7 +197,7 @@ function DrawContent(Articles)
 						</LI>
 						</UL>
 					</LI>
-					<LI>Арена
+					<LI Class='Hub'>Арена
 						<UL>
 						<LI>DM</LI>
 						<LI>HSDM</LI>
@@ -207,11 +209,11 @@ function DrawContent(Articles)
 					<LI>Мышка и клавиатура</LI>
 					</UL>
 				</LI>
-				<LI>Раскид
+				<LI Class='Hub'>Раскид
 					<UL>
-					<LI>Тренировка раскидки гранат
+					<LI Class='Hub'>Тренировка раскидки гранат
 						<UL>
-						<LI>Различные карты
+						<LI Class='Hub'>Различные карты
 							<UL>
 							<LI>Карты с траекториями гранат</LI>
 							<LI>Карты с гранатами</LI>
@@ -228,6 +230,7 @@ function DrawContent(Articles)
 			</UL>
 		 </Body>`,
 		[
+			'Library/UI/Components/HR',
 			'Content'
 		],
 		[],
