@@ -1,6 +1,6 @@
 // Functions
 
-function Template(Title, Body, CSS, JS, Fonts)
+function Template(Title, Body, CSS, JS, Fonts, Meta = '')
 {
 	CSS =
 	[
@@ -21,7 +21,7 @@ function Template(Title, Body, CSS, JS, Fonts)
 					<Link Rel='Icon' Href='https://cdnjs.cloudflare.com/ajax/libs/simple-icons/3.2.0/counter-strike.svg'>
 					<Meta Charset='UTF-8'>
 					<Meta Name='Viewport' Content='width=device-width, initial-scale=1, shrink-to-fit=no'>
-					<!-- <Link Rel='Manifest' Href='Manifest.webmanifest'> -->
+					${Meta}
 
 					${CSS.map(CSS => `<Link Rel='Stylesheet' Href='${CSS}.css'>`).join('')}
 
@@ -238,36 +238,36 @@ function DrawContent(Articles)
 	);
 }
 
-function DrawArticle(Title, Introduction, Authors, Body)
+function DrawArticle(Article)
 {
 	return Template
 	(
-		Title,
+		Article.Name,
 		`<Body AutoLayout Direction='Vertical' Width='Fill' Height='Fill' AlignX='Center'>
 			<Header AutoLayout Direction='Horizontal' Width='Fill' Height='Fit' Packing='Space between'>
-				<A Href='Content' Class='Text Icon'>
+				<A Href='Content' Class='Text Icon Roomy'>
 					<Custom-icon Icon='Receipt Long'></Custom-icon>
 					<Span>Оглавление</Span>
 				</A>
 			</Header>
 
 			<Article AutoLayout Direction='Vertical' Width='Fit' Height='Fill'>
-				<H1>${Title}</H1>
+				<H1>${Article.Name}</H1>
 
 				<P Class='Introduction'>
-					${Introduction}
+					${Article.Introduction}
 				</P>
 
 				<HR>
 
 				<Div Class='Authors' AutoLayout Direction='Horizontal'>
-					${Authors.map(Author => `<Div>${Author}</Div>`).join('')}
+					${Article.Authors.map(Author => `<Div>${Author}</Div>`).join('')}
 				</Div>
 
 				<HR>
 
 				<Div Class='Body'>
-					${Body}
+					${Article.Body}
 				</Div>
 			</Article>
 		</Body>`,
@@ -281,7 +281,9 @@ function DrawArticle(Title, Introduction, Authors, Body)
 		[
 			'Library/UI/Components/Icon/Script'
 		],
-		'Google+Sans:500|Playfair+Display:400,500|Lora:400'
+		'Google+Sans:500|Playfair+Display:400,500|Lora:400',
+		`<Meta Name='Author' Value='${Article.Authors.map(Author => Author).join(', ')}'>
+		 <Meta Name='Description' Value='${Article.Hub}'>`
 	);
 }
 
@@ -373,4 +375,4 @@ FileSystem.writeFileSync('Authors.html', DrawAuthors(Authors));
 FileSystem.writeFileSync('Content.html', DrawContent(Articles));
 
 for (let Article of Articles)
-	FileSystem.writeFileSync(`Article-${Article.Name}.html`, DrawArticle(Article.Name, Article.Introduction, Article.Authors, Article.Body));
+	FileSystem.writeFileSync(`Article-${Article.Name}.html`, DrawArticle(Article));

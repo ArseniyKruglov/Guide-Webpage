@@ -2,7 +2,6 @@
 HTML {
   Width: 100%;
   Height: 100%;
-  Overflow-X: Hidden;
 }
 
 Body {
@@ -18,7 +17,7 @@ Body > Header {
   Background-color: Var(--Background-01);
   Border-bottom: 1px Solid Var(--Gray-20);
   Gap: 10px;
-  Padding: 20px;
+  Padding: 17.5px;
 }
 
 Body > Article {
